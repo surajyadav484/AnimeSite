@@ -1,13 +1,51 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+  color: whitesmoke;
+}
+.anime {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+.container {
+  display: flex;
+  margin: 10px;
+}
+.select {
+  width: 20%;
+}
+.no-data {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.my-spinner {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .select {
+    width: 100%;
+  }
+  .anime {
+    display: grid;
+    place-items: center;
+  }
 }
